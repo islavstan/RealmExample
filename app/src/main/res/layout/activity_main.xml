@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.islavstan.realmexample.MainActivity">
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:hint="название книги"
+      android:maxLines="1"
+      android:id="@+id/edit_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="кол-во страниц"
+        android:maxLines="1"
+        android:inputType="number"
+        android:layout_below="@+id/edit_name"
+        android:id="@+id/edit_page"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="сохранить"
+        android:layout_below="@+id/edit_page"
+        android:id="@+id/savBtn"/>
+
+  <com.lapism.searchview.SearchView
+      android:id="@+id/searchView"
+      android:layout_below="@+id/savBtn"
+      android:layout_width="match_parent"
+      android:layout_height="50dp" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/searchView"
+        android:id="@+id/recycler"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
